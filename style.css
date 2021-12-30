@@ -98,8 +98,7 @@ label{
 .info{
     position: absolute;
     bottom: 0;
-    width: 100%;
-    text-align: center;
+    right: 10px;
     font-style: italic;
     font-weight: bolder;
     color:blue;
