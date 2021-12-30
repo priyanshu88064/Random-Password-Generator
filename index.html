@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div class="Main">
+    Random Password Generator
+</div>
+
+<div class="content">
+    <div class="b">
+        <input type="text" id="text" disabled>
+    </div>
+    <div class = "bhak">
+    <div class="b">
+        <input type="number" id="length" name="length" min="5" max="20">
+        <label for="length">Length</label>
+    </div>
+    <div class="b">
+        <input type="checkbox" id="isLow" name="isLow">
+        <label for="isLow">Include Lowercase</label>
+    </div>
+    <div class="b">
+        <input type="checkbox" id="isUpp" name="isUpp">
+        <label for="isUpp">Include Uppercase</label>
+    </div>
+    <div class="b">
+        <input type="checkbox" id="symbol" name="symbol">
+        <label for="symbol">Include Symbols</label>
+    </div>
+    <div class="b">
+        <input type="checkbox" id="number" name="number">
+        <label for="number">Include Numbers</label>
+    </div>
+    </div>
+
+    <div class="button">
+        <button class="generate" id="generate">Generate and COPY</button>        
+    </div>
+</div>
+
+<div class="info">
+    <a href="https://github.com/priyanshu88064/" target="_blank"><p><u>Made by Priyanshu Tiwari</u></p></a>
+</div>
+
+<!-- Javascript -->
+<script src="canvas.js"></script>
+
+</body>
+</html>
