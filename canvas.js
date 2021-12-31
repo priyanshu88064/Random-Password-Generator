@@ -5,6 +5,23 @@ const upp = document.getElementById("isUpp");
 const symbol = document.getElementById("symbol");
 const number = document.getElementById("number");
 const generate = document.getElementById("generate");
+const effect = document.getElementById("effect");
+const icon = document.getElementById("icon");
+const body = document.body;
+
+var speed=70;
+var i=0;
+var tt="Random Password Generator";
+
+function typingEffect(){
+    if(i<tt.length){
+        effect.innerHTML+=tt[i];
+        i++;
+        setTimeout(typingEffect,speed);
+    }
+}
+
+typingEffect();
 
 function getLow(){
     return String.fromCharCode(Math.floor(97+Math.random()*26));
@@ -30,9 +47,22 @@ function check1(){
     return 1;
 }
 
+function buttonreset(){
+    generate.style.transform="none";
+    generate.style.boxShadow=" 6px 6px 5px black";
+}
+
 function setback(){
     generate.innerHTML = "GENERATE and COPY";
     generate.disabled=false;
+    generate.style.backgroundColor="red";
+    generate.style.color="black";
+    text.style.transform="none";
+    body.style.background="url(background.jpg)";
+    body.style.backgroundRepeat="no-repeat";
+    body.style.backgroundSize="100% 200%";
+    icon.classList.remove("fix");
+    icon.className="pix";
 }
 
 function work(){
@@ -53,10 +83,26 @@ function work(){
         else if(arr[ind]==3)str+=getNum();
         else str+=getSymbol();
     }
+
     text.value=str;
     navigator.clipboard.writeText(str);
     generate.innerHTML=".....COPIED!.....";
     generate.disabled=true;
-    const timeout = setTimeout(setback,2000);
+    generate.style.transform="translateX(6px) translateY(6px)";
+    generate.style.boxShadow="none";
+    generate.style.backgroundColor="lightgreen";
+    generate.style.color="darkblue";
+    text.style.transform="rotate(360deg)";
+
+
+    body.style.background="linear-gradient(rgba(255,255,255,.2),rgba(255,255,255,.2)),url(background.jpg)";
+    body.style.backgroundRepeat="no-repeat";
+    body.style.backgroundSize="100% 200%";
+    icon.classList.remove("pix");
+    icon.className="fix";
+
+
+    const timeoutt = setTimeout(buttonreset,200);
+    const timeout = setTimeout(setback,1800);
 }
 generate.addEventListener("click",work);

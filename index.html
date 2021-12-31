@@ -10,8 +10,8 @@
 <body>
     
 <div class="Main">
-    <div>Random Password Generator</div>
-    <div><img src="padlock.png" width="70px"></div>
+    <div id="effect"></div>
+    <div ><img id="icon" src="padlock.png" width="70px"></div>
 </div>
 
 <div class="content">
@@ -19,26 +19,26 @@
         <input type="text" id="text" disabled>
     </div>
     <div class = "bhak">
-    <div class="b">
+    <ul><li><div class="b">
         <input type="number" id="length" name="length" min="5" max="20">
         <label for="length">Length</label>
-    </div>
-    <div class="b">
+    </div></li>
+    <li><div class="b">
         <input type="checkbox" id="isLow" name="isLow">
         <label for="isLow">Include Lowercase</label>
-    </div>
-    <div class="b">
+    </div></li>
+    <li><div class="b">
         <input type="checkbox" id="isUpp" name="isUpp">
         <label for="isUpp">Include Uppercase</label>
-    </div>
-    <div class="b">
+    </div></li>
+    <li><div class="b">
         <input type="checkbox" id="symbol" name="symbol">
         <label for="symbol">Include Symbols</label>
-    </div>
-    <div class="b">
+    </div></li>
+    <li><div class="b">
         <input type="checkbox" id="number" name="number">
         <label for="number">Include Numbers</label>
-    </div>
+    </div></li></ul>
     </div>
 
     <div class="button">
