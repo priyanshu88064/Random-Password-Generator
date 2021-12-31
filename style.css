@@ -29,6 +29,16 @@ body{
     from{color: red;}
     to{color: rgb(255,176,7);}
 }
+
+.fix{
+    transition: transform 0.5s;
+    transform: rotate(360deg);
+}
+.pix{
+    transition: transform 0.5s;
+    transform: none;
+}
+
 .content{
     margin:auto;
     margin-top: 5vw;
@@ -42,14 +52,6 @@ body{
     border-radius: 20px;
     box-shadow: 10px 10px 15px rgb(75, 68, 68);
     position: relative;
-
-    animation-name: move;
-    animation-duration: 1s;
-}
-@keyframes move{
-    0%{top:0;}
-    50%{top:20%;}
-    100%{top:0;}
 }
 #text{
     background-color: rgb(0, 0, 0);
@@ -61,6 +63,7 @@ body{
     border-radius: 5px;
     font-size: 25px;
     box-shadow: 6px 6px 10px rgb(78, 39, 114);
+    transition: transform 0.5s;
 }
 .b{
     margin-top: 10px;
@@ -100,11 +103,14 @@ body{
     font-family: monospace;
     padding:5px 10px 5px 10px;
     transition: background-color 0.3s;
+    transition: transform 0.3s;
+    transition: box-shadow 0.2s;
 }
-.generate:active{
-    transform: translateX(6px) translateY(6px);
-    box-shadow: none;
-}
+/* .generate:active{
+/* transform: translateX(6px) translateY(6px); */
+/* box-shadow: none; */
+/* } */ */
+
 .generate:disabled{
     color: darkblue;
     background-color: lightgreen;
@@ -132,7 +138,7 @@ label{
     }
     .content{
         width: 80%;
-        margin-top: 100px;
+        margin-top: 50px;
     }
     #text{
         font-size: 17px;
